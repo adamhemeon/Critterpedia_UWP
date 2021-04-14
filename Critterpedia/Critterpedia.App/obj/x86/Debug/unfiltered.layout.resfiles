@@ -1,4 +1,9 @@
 WinMetadata\Windows.winmd
+Assets\BadgeLogo.scale-100.png
+Assets\BadgeLogo.scale-125.png
+Assets\BadgeLogo.scale-150.png
+Assets\BadgeLogo.scale-200.png
+Assets\BadgeLogo.scale-400.png
 Assets\LargeTile.scale-100.png
 Assets\LargeTile.scale-125.png
 Assets\LargeTile.scale-150.png
@@ -40,6 +45,12 @@ Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\Square44x44Logo.targetsize-256.png
 Assets\Square44x44Logo.targetsize-32.png
 Assets\Square44x44Logo.targetsize-48.png
+Assets\src\acnh.png
+Assets\src\appicon.png
+Assets\src\nh_tab_bug.png
+Assets\src\nh_tab_dsc.png
+Assets\src\nh_tab_fish.png
+Assets\src\nintendo.png
 Assets\StoreLogo.scale-100.png
 Assets\StoreLogo.scale-125.png
 Assets\StoreLogo.scale-150.png

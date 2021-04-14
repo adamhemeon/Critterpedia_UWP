@@ -10,34 +10,34 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.DataContext>
+    <!--<Page.DataContext>
         <viewmodels:BugsViewModel/>
     </Page.DataContext>
 
     <Page.Resources>
 
-        <!-- Page Level Styles Go Here -->
+        --><!-- Page Level Styles Go Here --><!--
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"></Setter>
         </Style>
 
-        <!-- Page Level Collection View Source binds the view model from MainPage.cs -->
+        --><!-- Page Level Collection View Source binds the view model from MainPage.cs --><!--
         <CollectionViewSource x:Name="BugsCollection" Source="{x:Bind BugsViewModel.Critters}"/>
 
-        <!-- Data Template for the Bugs Master Detail inside the Scroll View -->
+        --><!-- Data Template for the Bugs Master Detail inside the Scroll View --><!--
         <DataTemplate x:Key="BugsMasterTemplate" x:DataType="models:Critter">
             <StackPanel Orientation="Horizontal">
                 <SymbolIcon Symbol="Camera" Margin="0,0,12,0"></SymbolIcon>
                 <StackPanel Margin="5">
-                    <!-- <TextBlock Text="{x:Bind Name}" FontSize="20"></TextBlock> -->
+                    --><!-- <TextBlock Text="{x:Bind Name}" FontSize="20"></TextBlock> --><!--
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
 
-    </Page.Resources>
+    </Page.Resources>-->
 
     <Grid>
-       
+        <TextBlock Text="Bugs Page"/>
     </Grid>
 
 </Page>

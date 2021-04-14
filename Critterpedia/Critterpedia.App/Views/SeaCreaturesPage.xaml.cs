@@ -24,11 +24,11 @@ namespace Critterpedia.App
     /// </summary>
     public sealed partial class SeaCreaturesPage : Page
     {
-        private SeaCreaturesViewModel SeaCreaturesViewModel { get; set; }
+        //private SeaCreaturesViewModel SeaCreaturesViewModel { get; set; }
         public SeaCreaturesPage()
         {
             this.InitializeComponent();
-            this.SeaCreaturesViewModel = new SeaCreaturesViewModel();
+            //this.SeaCreaturesViewModel = new SeaCreaturesViewModel();
         }
     }
 }

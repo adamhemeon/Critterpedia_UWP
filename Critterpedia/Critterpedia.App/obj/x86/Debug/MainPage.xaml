@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Critterpedia.App.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Critterpedia.App"
+    xmlns:models="using:Critterpedia.App.Models"
+    xmlns:viewmodels="using:Critterpedia.App.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- Page Level Styles -->
+        <Style TargetType="Image">
+            <Setter Property="Margin" Value="20"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="300"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BorderBrush" Value="#FF4C3C33"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+    </Page.Resources>
+    
+    <Page.TopAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:ConnectionId='2' x:Name="About" Label="About Critterpedia" 
+                              ToolTipService.ToolTip="About Critterpedia Application"
+                                                 />
+                <AppBarButton x:ConnectionId='3' x:Name="Exit" Label="Exit" 
+                              ToolTipService.ToolTip="Exit" 
+                                                />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:ConnectionId='4' x:Name="FishButton"                         >
+                <Image x:ConnectionId='9' x:Name="FishButtonImg" Source="/Assets/src/nh_tab_fish.png"/>
+            </Button>
+            <Button x:ConnectionId='5' x:Name="BugsButton"                         >
+                <Image x:ConnectionId='8' x:Name="BugsButtonImg" Source="/Assets/src/nh_tab_bug.png"/>
+            </Button>
+            <Button x:ConnectionId='6' x:Name="SeaCreaturesButton"                                 >
+                <Image x:ConnectionId='7' x:Name="SeaCreaturesButtonImg" Source="/Assets/src/nh_tab_dsc.png"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
+

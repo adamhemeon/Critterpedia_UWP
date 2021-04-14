@@ -9,5 +9,6 @@
     <AppIconSource>K:\NSCC\Portfolio\Critterpedia\Critterpedia\CritterpediaThreeTabbed\app\src\main\res\drawable\appicon.png</AppIconSource>
     <SplashScreenSource>K:\NSCC\Portfolio\Critterpedia\Critterpedia\CritterpediaThreeTabbed\app\src\main\res\drawable\appicon.png</SplashScreenSource>
     <PackageLogoSource>K:\NSCC\Portfolio\Critterpedia\Critterpedia\CritterpediaThreeTabbed\app\src\main\res\drawable\appicon.png</PackageLogoSource>
+    <BadgeLogoSource>K:\NSCC\Portfolio\Critterpedia\Critterpedia\CritterpediaThreeTabbed\app\src\main\res\drawable\appicon.png</BadgeLogoSource>
   </PropertyGroup>
 </Project>

@@ -24,12 +24,12 @@ namespace Critterpedia.App
     /// </summary>
     public sealed partial class BugsPage : Page
     {
-        private BugsViewModel BugsViewModel { get; set; }
+        //private BugsViewModel BugsViewModel { get; set; }
 
         public BugsPage()
         {
             this.InitializeComponent();
-            this.BugsViewModel = new BugsViewModel();
+            //this.BugsViewModel = new BugsViewModel();
         }
     }
 }

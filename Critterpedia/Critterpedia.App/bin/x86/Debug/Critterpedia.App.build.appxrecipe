@@ -34,6 +34,26 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -177,6 +197,24 @@
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\acnh.png">
+      <PackagePath>Assets\src\acnh.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\appicon.png">
+      <PackagePath>Assets\src\appicon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\nh_tab_bug.png">
+      <PackagePath>Assets\src\nh_tab_bug.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\nh_tab_dsc.png">
+      <PackagePath>Assets\src\nh_tab_dsc.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\nh_tab_fish.png">
+      <PackagePath>Assets\src\nh_tab_fish.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\nintendo.png">
+      <PackagePath>Assets\src\nintendo.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>

@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>AD4F16D034F90488254209E64C1EC714AB387791E848031BA21F721BF9927CD0</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>A6B022693FDAF9FED90EE2D9E5AA43E4FB80E90549F50B4397790A408DA9A40E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>f5795559-7058-4582-b14f-ef7c43d717d4_1.0.0.0_x86__x0zzwzwjavx7m</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>f5795559-7058-4582-b14f-ef7c43d717d4_x0zzwzwjavx7m!App</RegisteredUserModeAppID>
     <RegisteredPackageID>f5795559-7058-4582-b14f-ef7c43d717d4</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-03-29T19:13:49.105</Modified>
+      <Modified>2021-04-14T18:21:15.930</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\Critterpedia.App.exe">
       <PackagePath>entrypoint\Critterpedia.App.exe</PackagePath>
-      <Modified>2021-03-29T19:13:48.487</Modified>
+      <Modified>2021-04-14T18:21:15.365</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.11\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -45,6 +45,31 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2020-12-02T07:52:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-04-14T17:46:00.521</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-125.png">
+      <PackagePath>Assets\BadgeLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-04-14T17:46:00.539</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-150.png">
+      <PackagePath>Assets\BadgeLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-04-14T17:46:00.551</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-04-14T17:46:00.563</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\BadgeLogo.scale-400.png">
+      <PackagePath>Assets\BadgeLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2021-04-14T17:46:00.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
@@ -226,6 +251,30 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2021-03-29T19:11:51.581</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\acnh.png">
+      <PackagePath>Assets\src\acnh.png</PackagePath>
+      <Modified>2021-04-14T17:05:26.513</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\appicon.png">
+      <PackagePath>Assets\src\appicon.png</PackagePath>
+      <Modified>2021-03-29T19:15:06.609</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\nh_tab_bug.png">
+      <PackagePath>Assets\src\nh_tab_bug.png</PackagePath>
+      <Modified>2021-03-29T19:15:06.613</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\nh_tab_dsc.png">
+      <PackagePath>Assets\src\nh_tab_dsc.png</PackagePath>
+      <Modified>2021-03-29T19:15:06.617</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\nh_tab_fish.png">
+      <PackagePath>Assets\src\nh_tab_fish.png</PackagePath>
+      <Modified>2021-03-29T19:15:06.603</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\src\nintendo.png">
+      <PackagePath>Assets\src\nintendo.png</PackagePath>
+      <Modified>2021-04-14T17:05:26.522</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -306,39 +355,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\Critterpedia.App.xr.xml">
       <PackagePath>Critterpedia.App.xr.xml</PackagePath>
-      <Modified>2021-03-29T19:09:11.464</Modified>
+      <Modified>2021-04-14T18:18:35.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-03-29T19:09:11.475</Modified>
+      <Modified>2021-04-14T18:21:15.278</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\AboutPage.xbf">
       <PackagePath>AboutPage.xbf</PackagePath>
-      <Modified>2021-03-29T19:13:48.392</Modified>
+      <Modified>2021-04-14T18:21:15.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\UserControls\AboutAppDialog.xbf">
       <PackagePath>UserControls\AboutAppDialog.xbf</PackagePath>
-      <Modified>2021-03-29T19:13:48.393</Modified>
+      <Modified>2021-04-14T18:21:15.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\UserControls\MasterDetailControl.xbf">
       <PackagePath>UserControls\MasterDetailControl.xbf</PackagePath>
-      <Modified>2021-03-29T19:13:48.393</Modified>
+      <Modified>2021-04-14T18:21:15.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\Views\BugsPage.xbf">
       <PackagePath>Views\BugsPage.xbf</PackagePath>
-      <Modified>2021-03-29T19:13:48.394</Modified>
+      <Modified>2021-04-14T18:21:15.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\Views\FishPage.xbf">
       <PackagePath>Views\FishPage.xbf</PackagePath>
-      <Modified>2021-03-29T19:13:48.394</Modified>
+      <Modified>2021-04-14T18:21:15.280</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2021-03-29T19:13:48.395</Modified>
+      <Modified>2021-04-14T18:21:15.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\Views\SeaCreaturesPage.xbf">
       <PackagePath>Views\SeaCreaturesPage.xbf</PackagePath>
-      <Modified>2021-03-29T19:13:48.395</Modified>
+      <Modified>2021-04-14T18:21:15.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.19041.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -346,11 +395,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-03-29T19:13:48.622</Modified>
+      <Modified>2021-04-14T17:57:00.972</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\Core\Critterpedia.App.exe">
       <PackagePath>Critterpedia.App.exe</PackagePath>
-      <Modified>2021-03-29T19:13:49.083</Modified>
+      <Modified>2021-04-14T18:21:15.926</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
