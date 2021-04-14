@@ -26,5 +26,10 @@ namespace Critterpedia.App
         {
             this.InitializeComponent();
         }
+
+        private void SearchBox_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

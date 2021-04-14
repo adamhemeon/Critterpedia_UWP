@@ -28,18 +28,19 @@
                           ToolTipService.ToolTip="Delete Note">
             </AppBarButton>-->
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:Name="About" Label="About Critterpedia" ToolTipService.ToolTip="About Critterpedia Application"></AppBarButton>
-                <AppBarButton x:Name="Exit" Label="Exit" ToolTipService.ToolTip="Exit"></AppBarButton>
+                <AppBarButton x:ConnectionId='2' x:Name="About" Label="About Critterpedia" ToolTipService.ToolTip="About Critterpedia Application"></AppBarButton>
+                <AppBarButton x:ConnectionId='3' x:Name="Exit" Label="Exit" ToolTipService.ToolTip="Exit"></AppBarButton>
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>
 
     <Grid>
-        <uc:MasterDetailControl
+        <uc:MasterDetailControl x:ConnectionId='4'
                 x:Name="CritterSearchBox"
                 Grid.Row="0" Grid.Column="0"
-                Loaded="SearchBox_Loaded" />
+                                          />
         
         <!-- TODO: Add three image buttons, each button on click brings us to the master detail for that type of Critter. -->
     </Grid>
 </Page>
+

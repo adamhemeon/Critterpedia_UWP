@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {}
+    "H:\\NSCC\\Winter2021\\PROG2500\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {}
   },
   "projects": {
-    "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {
+    "H:\\NSCC\\Winter2021\\PROG2500\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
+        "projectUniqueName": "H:\\NSCC\\Winter2021\\PROG2500\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
         "projectName": "Critterpedia.App",
-        "projectPath": "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
-        "packagesPath": "C:\\Users\\adamh\\.nuget\\packages\\",
-        "outputPath": "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\obj\\",
+        "projectPath": "H:\\NSCC\\Winter2021\\PROG2500\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
+        "packagesPath": "C:\\Users\\moreh\\.nuget\\packages\\",
+        "outputPath": "H:\\NSCC\\Winter2021\\PROG2500\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\adamh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\moreh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

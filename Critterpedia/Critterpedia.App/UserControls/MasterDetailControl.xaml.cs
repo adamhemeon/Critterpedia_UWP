@@ -19,6 +19,8 @@ namespace Critterpedia.App.UserControls
 {
     public sealed partial class MasterDetailControl : UserControl
     {
+        private ViewModels.ICritterViewModel CViewModel { get; set; }
+
         public MasterDetailControl()
         {
             this.InitializeComponent();
