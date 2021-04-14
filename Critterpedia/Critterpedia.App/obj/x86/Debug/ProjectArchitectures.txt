@@ -1,1 +1,1 @@
-K:\NSCC\Year_2\Winter_2021\PROG2500Geoff\FinalProject\Critterpedia_UWP\Critterpedia\Critterpedia.App\Critterpedia.App.csproj;x86
+D:\Winter2021\Windows_Programming\FinalProject\Critterpedia\Critterpedia.App\Critterpedia.App.csproj;x86

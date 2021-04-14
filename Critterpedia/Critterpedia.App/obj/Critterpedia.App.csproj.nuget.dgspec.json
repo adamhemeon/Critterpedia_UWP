@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {}
+    "D:\\Winter2021\\Windows_Programming\\FinalProject\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {}
   },
   "projects": {
-    "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {
+    "D:\\Winter2021\\Windows_Programming\\FinalProject\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
+        "projectUniqueName": "D:\\Winter2021\\Windows_Programming\\FinalProject\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
         "projectName": "Critterpedia.App",
-        "projectPath": "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
-        "packagesPath": "C:\\Users\\adamh\\.nuget\\packages\\",
-        "outputPath": "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\obj\\",
+        "projectPath": "D:\\Winter2021\\Windows_Programming\\FinalProject\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
+        "packagesPath": "C:\\Users\\brady\\.nuget\\packages\\",
+        "outputPath": "D:\\Winter2021\\Windows_Programming\\FinalProject\\Critterpedia\\Critterpedia.App\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\adamh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\brady\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -42,6 +40,10 @@
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
               "version": "[6.2.11, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
