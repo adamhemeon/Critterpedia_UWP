@@ -13,13 +13,13 @@ using System.Diagnostics;
 
 namespace Critterpedia.App.ViewModels
 {
-    class BugsViewModel : ICritterViewModel
+    class BugsViewModel// : ICritterViewModel
     {
-        public CritterpediaRepo Repo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public ObservableCollection<Critter> Critters { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<Critter> AllCritters { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Critter SelectedCritter { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Filter { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public CritterpediaRepo Repo;// { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public ObservableCollection<Critter> Critters;// { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<Critter> AllCritters;// { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Critter SelectedCritter;// { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Filter;// { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -49,7 +49,7 @@ namespace Critterpedia.App.ViewModels
         public BugsViewModel()
         {
             this.Repo = new CritterpediaRepo();
-            // Repo.GetBugs();
+            Repo.GetBugs();
         }
     }
 }

@@ -8,5 +8,6 @@ namespace Critterpedia.App.Models
 {
     abstract class Critter
     {
+
     }
 }

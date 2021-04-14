@@ -149,3 +149,4 @@ D:\Winter2021\Windows_Programming\FinalProject\Critterpedia\Critterpedia.App\obj
 D:\Winter2021\Windows_Programming\FinalProject\Critterpedia\Critterpedia.App\obj\x86\Debug\ProjectArchitectures.txt
 D:\Winter2021\Windows_Programming\FinalProject\Critterpedia\Critterpedia.App\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637112714540000000.json
 D:\Winter2021\Windows_Programming\FinalProject\Critterpedia\Critterpedia.App\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424923200000000.json
+D:\Winter2021\Windows_Programming\FinalProject\Critterpedia\Critterpedia.App\bin\x86\Debug\Newtonsoft.Json.dll
