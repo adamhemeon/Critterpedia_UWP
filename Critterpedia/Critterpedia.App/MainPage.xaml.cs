@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Critterpedia.App.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,9 @@ namespace Critterpedia.App
         public MainPage()
         {
             this.InitializeComponent();
+            FishViewModel fvm = new FishViewModel();
+            SeaCreaturesViewModel scvm = new SeaCreaturesViewModel();
+            BugsViewModel bvm = new BugsViewModel();
         }
 
 

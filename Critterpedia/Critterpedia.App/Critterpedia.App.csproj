@@ -123,9 +123,11 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands\ExitCommand.cs" />
+    <Compile Include="Models\Availability.cs" />
     <Compile Include="Models\Bug.cs" />
     <Compile Include="Models\Critter.cs" />
     <Compile Include="Models\Fish.cs" />
+    <Compile Include="Models\Name.cs" />
     <Compile Include="Models\SeaCreature.cs" />
     <Compile Include="Repository\CritterpediaRepo.cs" />
     <Compile Include="UserControls\AboutAppDialog.xaml.cs">
@@ -259,6 +261,9 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.11</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />

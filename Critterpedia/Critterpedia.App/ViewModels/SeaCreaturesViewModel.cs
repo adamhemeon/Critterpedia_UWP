@@ -8,7 +8,7 @@ using Critterpedia.App.Repository;
 
 namespace Critterpedia.App.ViewModels
 {
-    class SeaCreaturesViewModel : ICritterViewModel
+    class SeaCreaturesViewModel// : ICritterViewModel
     {
         public CritterpediaRepo Repo { get; set; }
 
@@ -104,9 +104,11 @@ namespace Critterpedia.App.ViewModels
         public SeaCreaturesViewModel()
         {
             this.Repo = new CritterpediaRepo();
-            // Repo.GetSeaCreatures();
+            Repo.GetSeaCreatures();
+
             AllCritters = new List<Critter>();
             PerformFiltering();
+
         }
         #endregion
     }

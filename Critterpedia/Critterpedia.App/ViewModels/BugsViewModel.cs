@@ -13,8 +13,9 @@ using System.Diagnostics;
 
 namespace Critterpedia.App.ViewModels
 {
-    class BugsViewModel : ICritterViewModel
+    class BugsViewModel// : ICritterViewModel
     {
+
         public CritterpediaRepo Repo { get; set; }
 
         #region Collections and lists
@@ -107,9 +108,10 @@ namespace Critterpedia.App.ViewModels
         public BugsViewModel()
         {
             this.Repo = new CritterpediaRepo();
-            // Repo.GetBugs();
+            Repo.GetBugs();
             AllCritters = new List<Critter>();
             PerformFiltering();
+
         }
     }
 }

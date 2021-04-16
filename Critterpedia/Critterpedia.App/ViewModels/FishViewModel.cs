@@ -13,7 +13,7 @@ using System.Diagnostics;
 
 namespace Critterpedia.App.ViewModels
 {
-    class FishViewModel : ICritterViewModel
+    class FishViewModel
     {
         public CritterpediaRepo Repo { get; set; }
         #region Collections and lists
@@ -105,7 +105,8 @@ namespace Critterpedia.App.ViewModels
         public FishViewModel()
         {
             this.Repo = new CritterpediaRepo();
-            // Repo.GetFish();
+            Repo.GetFish();
+
             AllCritters = new List<Critter>();
             PerformFiltering();
         }
