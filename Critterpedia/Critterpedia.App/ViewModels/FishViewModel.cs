@@ -13,25 +13,23 @@ using System.Diagnostics;
 
 namespace Critterpedia.App.ViewModels
 {
-    class FishViewModel : ICritterViewModel
+    class FishViewModel// : ICritterViewModel
     {
         public CritterpediaRepo Repo { get; set; }
-        #region Collections and lists
-        public ObservableCollection<Critter> Critters { get; set; }
-        public List<Critter> AllCritters { get; set; }
-        public Critter _selectedCritter { get; set; }
-        #endregion
 
+        #region Collections and lists
+        public ObservableCollection<Fish> Fish { get; set; }
+        public List<Fish> AllFish = new List<Fish>();
+        public Fish _selectedFish { get; set; }
+        #endregion
         public string _filter { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public Critter SelectedCritter
+        public Fish SelectedFish
         {
-            get { return _selectedCritter; }
+            get { return _selectedFish; }
             set
             {
-                _selectedCritter = value;
+                _selectedFish = value;
             }
         }
 
@@ -40,64 +38,80 @@ namespace Critterpedia.App.ViewModels
             get { return _filter; }
             set
             {
-                if(value == _filter) { return; }
+                if (value == _filter) { return; }
                 _filter = value;
                 PerformFiltering();
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Filter)));
             }
         }
 
-        public void AddCritter()
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #region Methods
+        public void AddFish(Fish fish)
         {
-            throw new NotImplementedException();
-            /*Critter newCritter = new Critter(?);
-            AllCritters.Add(newCritter);
-            PerformFiltering();*/
+            AllFish.Add(fish);
+            PerformFiltering();
+        }
+
+        public void RemoveFish(Fish fish)
+        {
+            AllFish.Remove(fish);
+            PerformFiltering();
+
+            if (SelectedFish == fish)
+            {
+                SelectedFish = null;
+            }
         }
 
         public void PerformFiltering()
         {
-            throw new NotImplementedException();
-            /*if (_filter == null)
+            if (_filter == null)
             {
                 _filter = "";
             }
-
+            //If _filter has a value (ie. user entered something in Filter textbox)
+            //Lower-case and trim string
             var lowerCaseFilter = Filter.ToLowerInvariant().Trim();
 
-            var result = AllCritters.Where(d => d.name?).ToList();
+            //Use LINQ query to get all personmodel names that match filter text, as a list
+            var result =
+                AllFish.Where(n => n.name.ToLowerInvariant()
+                .Contains(lowerCaseFilter))
+                .ToList();
 
-            var toRemove = Critters.Except(result).ToList();
+            //Get list of values in current filtered list that we want to remove
+            //(ie. don't meet new filter criteria)
+            var toRemove = Fish.Except(result).ToList();
 
-            foreach(var x in toRemove)
+            //Loop to remove items that fail filter
+            foreach (var note in toRemove)
             {
-                Critters.Remove(x);
+                Fish.Remove(note);
             }
 
             var resultCount = result.Count;
-
-            for(int i = 0; i < resultCount; i++)
+            // Add back in correct order.
+            for (int i = 0; i < resultCount; i++)
             {
-                var resultItem = resultCount[i];
-                if(i + 1 > Critters.Count || !Critters[i].Equals(resultItem))
+                var resultItem = result[i];
+                if (i + 1 > Fish.Count || !Fish[i].Equals(resultItem))
                 {
-                    Critters.Insert(i, resultItem);
+                    Fish.Insert(i, resultItem);
                 }
-            }*/
+            }
         }
 
         public void Refresh()
         {
-            throw new NotImplementedException();
-        }
+            AllFish.Clear();
+            Fish.Clear();
+            GetFish();
 
-        public void RemoveCritter()
-        {
-            throw new NotImplementedException();
-            /*AllCritters.Remove(SelectedCritter);
-            SelectedCritter = null;
-            PerformFiltering();*/
+            SelectedFish = null;
         }
+        #endregion
 
         /// <summary>
         /// Constructor
@@ -105,9 +119,20 @@ namespace Critterpedia.App.ViewModels
         public FishViewModel()
         {
             this.Repo = new CritterpediaRepo();
-            // Repo.GetFish();
-            AllCritters = new List<Critter>();
+            Fish = new ObservableCollection<Fish>();
+
+            Refresh();
             PerformFiltering();
+        }
+
+        public async void GetFish()
+        {
+            AllFish = await Repo.GetFish();
+
+            foreach (Fish fish in AllFish)
+            {
+                Fish.Add(fish);
+            }
         }
     }
 }

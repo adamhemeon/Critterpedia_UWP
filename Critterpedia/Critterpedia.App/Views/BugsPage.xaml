@@ -16,20 +16,17 @@
 
     <Page.Resources>
 
-        <!-- Page Level Styles Go Here -->
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"></Setter>
         </Style>
 
-        <!-- Page Level Collection View Source binds the view model from MainPage.cs -->
-        <CollectionViewSource x:Name="BugsCollection" Source="{x:Bind BugsViewModel.Critters}"/>
+        <CollectionViewSource x:Name="BugsCollection" Source="{x:Bind BugsViewModel.Bugs}"/>
 
-        <!-- Data Template for the Bugs Master Detail inside the Scroll View -->
-        <DataTemplate x:Key="BugsMasterTemplate" x:DataType="models:Critter">
+        <DataTemplate x:Key="BugsMasterTemplate" x:DataType="models:Bug">
             <StackPanel Orientation="Horizontal">
-                <SymbolIcon Symbol="Camera" Margin="0,0,12,0"></SymbolIcon>
-                <StackPanel Margin="5">
-                    <!-- <TextBlock Text="{x:Bind Name}" FontSize="20"></TextBlock> -->
+                <Image Source="{x:Bind iconUri}"/>
+                <StackPanel Margin="5" VerticalAlignment="Center">
+                    <TextBlock Text="{x:Bind customName}" FontSize="20" VerticalAlignment="Center"/>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
@@ -37,7 +34,33 @@
     </Page.Resources>
 
     <Grid>
-       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="106*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="259*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Bugs Page"/>
+
+        <!-- Search Box Here -->
+        <TextBox x:Name="FilterTextbox" 
+                 Text="{x:Bind BugsViewModel.Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 PlaceholderText="Search Bugs..."
+                 ToolTipService.ToolTip="Search Bugs"
+                 FontSize="24" Margin="10" Height="40"
+                 Grid.Row="0" Grid.Column="0"/>
+
+        <!-- Bug Collection Here -->
+        <ScrollViewer Grid.Column="0" Grid.Row="1" >
+            <ListView VerticalAlignment="Top"
+                ItemsSource="{Binding Source={StaticResource BugsCollection}}"
+                ItemTemplate="{StaticResource BugsMasterTemplate}"
+                SelectedItem="{x:Bind BugsViewModel.SelectedBug, Mode=TwoWay}">
+            </ListView>
+        </ScrollViewer>
     </Grid>
 
 </Page>

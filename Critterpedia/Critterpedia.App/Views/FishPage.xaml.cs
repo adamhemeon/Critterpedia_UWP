@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Critterpedia.App.ViewModels;
 using Critterpedia.App.UserControls;
+using Windows.UI.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,6 +30,35 @@ namespace Critterpedia.App
         {
             this.InitializeComponent();
             this.FishViewModel = new FishViewModel();
+        }
+
+        /// <summary>
+        /// Override the on navigated to, built in navigation controls
+        /// 
+        /// OnNavigatedFrom, OnNavigatedTo, OnNavigatingFrom available.
+        /// </summary>
+        /// <param name="e"></param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Determining whether to show the default back button
+            SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+
+            // Add our back requested event handler to go back
+            SystemNavigationManager.GetForCurrentView().BackRequested += About_BackRequested;
+        }
+
+        /// <summary>
+        /// Event handler to go back from About Page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void About_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
+            e.Handled = true;
         }
     }
 }

@@ -17,11 +17,11 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Critterpedia.App.UserControls
 {
-    public sealed partial class MasterDetailControl : UserControl
+    public sealed partial class SearchBar : UserControl
     {
         private ViewModels.ICritterViewModel CViewModel { get; set; }
 
-        public MasterDetailControl()
+        public SearchBar()
         {
             this.InitializeComponent();
         }

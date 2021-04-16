@@ -38,7 +38,8 @@
         Description="This application was developed by Adam Hemeon, Jayden Morehouse, Kieran London, and Jayden Morehouse for the Nova Scotia Community College Winter 2021 PROG2500 Windows Programming course. Windows UWP Application using XAML and data binding to pull Nintendo&apos;s Animal Crossing critter data (fish, bugs, sea creatures) from a public API and display them in a Master Detail / Flow format."
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" ShortName="critterpedia" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png"  BackgroundColor="aliceBlue"/>
+        <uap:LockScreen BadgeLogo="Assets\BadgeLogo.png" Notification="badge"/>
       </uap:VisualElements>
     </Application>
   </Applications>

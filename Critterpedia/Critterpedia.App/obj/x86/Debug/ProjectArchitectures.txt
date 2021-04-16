@@ -1,1 +1,0 @@
-E:\C#\Last\Critterpedia\Critterpedia.App\Critterpedia.App.csproj;x86
