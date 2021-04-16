@@ -17,6 +17,12 @@ namespace Critterpedia.App.Models
         [JsonProperty(PropertyName = "shadow")]
         public string shadow { get; set; }
 
+        public override string ToString()
+        {
+            return "Name: " + this.name + "\r\nShadow: " + this.shadow + "\r\nPrice: " + this.price +
+                "\r\nCatch Phrase: " + this.catchPhrase + "\r\nMuseum Phrase: " + this.museumPhrase + "\r\nRarity: " + this.availability.rarity
+                + "\r\nLocation: " + this.availability.location;
+        }
 
     }
 

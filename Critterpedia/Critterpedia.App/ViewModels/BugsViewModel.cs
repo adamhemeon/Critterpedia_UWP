@@ -111,14 +111,6 @@ namespace Critterpedia.App.ViewModels
 
             SelectedBug = null;
         }
-
-        public void RemoveBug()
-        {
-            throw new NotImplementedException();
-            /*AllCritters.Remove(SelectedCritter);
-            SelectedCritter = null;
-            PerformFiltering();*/
-        }
         #endregion
 
         /// <summary>

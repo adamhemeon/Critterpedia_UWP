@@ -13,21 +13,35 @@ namespace Critterpedia.App.ViewModels
         public CritterpediaRepo Repo { get; set; }
 
         #region Collections and lists
-        public ObservableCollection<Critter> Critters { get; set ; }
-        public List<Critter> AllCritters { get; set; }
-        public Critter _selectedCritter;
+        public ObservableCollection<SeaCreature> SeaCreatures { get; set; }
+        public List<SeaCreature> AllSeaCreatures = new List<SeaCreature>();
+        public SeaCreature _selectedSeaCreature { get; set; }
         #endregion
-
         public string _filter { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        public string SeaCreatureInfo { get; set; }
 
-        public Critter SelectedCritter
+        //public string SeaCreatureImageUri { get; set; }
+
+        public SeaCreature SelectedSeaCreature
         {
-            get { return _selectedCritter; }
+            get { return _selectedSeaCreature; }
             set
             {
-                _selectedCritter = value;
+                _selectedSeaCreature = value;
+                if(value == null)
+                {
+                    SeaCreatureInfo = "";
+                    //SeaCreatureImageUri = "/Assets/src/nh_tab_dsc.png";
+                }
+                else
+                {
+                    SeaCreatureInfo = value.ToString();
+                    //SeaCreatureImageUri = value.imageUri;
+                }
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SeaCreatureInfo"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SeaCreatureImageUri"));
             }
         }
 
@@ -43,73 +57,94 @@ namespace Critterpedia.App.ViewModels
             }
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         #region Methods
-        public void AddCritter()
+        public void AddSeaCreature(SeaCreature sc)
         {
-            throw new NotImplementedException();
-            /*Critter newCritter = new Critter(?);
-            AllCritters.Add(newCritter);
-            PerformFiltering();*/
+            AllSeaCreatures.Add(sc);
+            PerformFiltering();
+        }
+
+        public void RemoveSeaCreature(SeaCreature sc)
+        {
+            AllSeaCreatures.Remove(sc);
+            PerformFiltering();
+
+            if (SelectedSeaCreature == sc)
+            {
+                SelectedSeaCreature = null;
+            }
         }
 
         public void PerformFiltering()
         {
-            //throw new NotImplementedException();
-            /*if (_filter == null)
+            if (_filter == null)
             {
                 _filter = "";
             }
-
+            //If _filter has a value (ie. user entered something in Filter textbox)
+            //Lower-case and trim string
             var lowerCaseFilter = Filter.ToLowerInvariant().Trim();
 
-            var result = AllCritters.Where(d => d.name?).ToList();
+            //Use LINQ query to get all personmodel names that match filter text, as a list
+            var result =
+                AllSeaCreatures.Where(n => n.name.ToLowerInvariant()
+                .Contains(lowerCaseFilter))
+                .ToList();
 
-            var toRemove = Critters.Except(result).ToList();
+            //Get list of values in current filtered list that we want to remove
+            //(ie. don't meet new filter criteria)
+            var toRemove = SeaCreatures.Except(result).ToList();
 
-            foreach(var x in toRemove)
+            //Loop to remove items that fail filter
+            foreach (var note in toRemove)
             {
-                Critters.Remove(x);
+                SeaCreatures.Remove(note);
             }
 
             var resultCount = result.Count;
-
-            for(int i = 0; i < resultCount; i++)
+            // Add back in correct order.
+            for (int i = 0; i < resultCount; i++)
             {
-                var resultItem = resultCount[i];
-                if(i + 1 > Critters.Count || !Critters[i].Equals(resultItem))
+                var resultItem = result[i];
+                if (i + 1 > SeaCreatures.Count || !SeaCreatures[i].Equals(resultItem))
                 {
-                    Critters.Insert(i, resultItem);
+                    SeaCreatures.Insert(i, resultItem);
                 }
-            }*/
+            }
         }
 
         public void Refresh()
         {
-            throw new NotImplementedException();
-        }
+            AllSeaCreatures.Clear();
+            SeaCreatures.Clear();
+            GetSeaCreatures();
 
-        public void RemoveCritter()
-        {
-            throw new NotImplementedException();
-            /*AllCritters.Remove(SelectedCritter);
-            SelectedCritter = null;
-            PerformFiltering();*/
+            SelectedSeaCreature = null;
         }
         #endregion
 
-        #region Constructors
         /// <summary>
         /// Constructor
         /// </summary>
         public SeaCreaturesViewModel()
         {
             this.Repo = new CritterpediaRepo();
-            Repo.GetSeaCreatures();
+            SeaCreatures = new ObservableCollection<SeaCreature>();
 
-            AllCritters = new List<Critter>();
+            Refresh();
             PerformFiltering();
-
         }
-        #endregion
+
+        public async void GetSeaCreatures()
+        {
+            AllSeaCreatures = await Repo.GetSeaCreatures();
+
+            foreach (SeaCreature sc in AllSeaCreatures)
+            {
+                SeaCreatures.Add(sc);
+            }
+        }
     }
 }

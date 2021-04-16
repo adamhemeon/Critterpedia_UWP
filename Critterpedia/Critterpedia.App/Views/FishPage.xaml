@@ -10,34 +10,57 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <!--<Page.DataContext>
+    <Page.DataContext>
         <viewmodels:FishViewModel/>
-    </Page.DataContext>-->
+    </Page.DataContext>
 
-    <!--<Page.Resources>
+    <Page.Resources>
 
-        --><!-- Page Level Styles Go Here --><!--
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"></Setter>
         </Style>
 
-        --><!-- Page Level Collection View Source binds the view model from MainPage.cs --><!--
-        <CollectionViewSource x:Name="FishCollection" Source="{x:Bind FishViewModel.Critters}"/>
+        <CollectionViewSource x:Name="FishCollection" Source="{x:Bind FishViewModel.Fish}"/>
 
-        --><!-- Data Template for the Fish Master Detail inside the Scroll View --><!--
         <DataTemplate x:Key="FishMasterTemplate" x:DataType="models:Fish">
             <StackPanel Orientation="Horizontal">
-                <SymbolIcon Symbol="Camera" Margin="0,0,12,0"></SymbolIcon>
-                <StackPanel Margin="5">
-                    --><!-- <TextBlock Text="{x:Bind Name}" FontSize="20"></TextBlock> --><!--
+                <Image Source="{x:Bind iconUri}"/>
+                <StackPanel Margin="5" VerticalAlignment="Center">
+                    <TextBlock Text="{x:Bind customName}" FontSize="20" VerticalAlignment="Center"/>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
 
-    </Page.Resources>-->
+    </Page.Resources>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="106*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="259*"/>
+        </Grid.ColumnDefinitions>
+
         <TextBlock Text="Fish Page"/>
+
+        <!-- Search Box Here -->
+        <TextBox x:Name="FilterTextbox" 
+                 Text="{x:Bind FishViewModel.Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 PlaceholderText="Search Fish..."
+                 ToolTipService.ToolTip="Search Fish"
+                 FontSize="24" Margin="10" Height="40"
+                 Grid.Row="0" Grid.Column="0"/>
+
+        <!-- Bug Collection Here -->
+        <ScrollViewer Grid.Column="0" Grid.Row="1" >
+            <ListView VerticalAlignment="Top"
+                ItemsSource="{Binding Source={StaticResource FishCollection}}"
+                ItemTemplate="{StaticResource FishMasterTemplate}"
+                SelectedItem="{x:Bind FishViewModel.SelectedFish, Mode=TwoWay}">
+            </ListView>
+        </ScrollViewer>
     </Grid>
 
 </Page>

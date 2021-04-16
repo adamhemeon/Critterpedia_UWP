@@ -25,11 +25,11 @@ namespace Critterpedia.App
     /// </summary>
     public sealed partial class FishPage : Page
     {
-        //private FishViewModel FishViewModel { get; set; }
+        private FishViewModel FishViewModel { get; set; }
         public FishPage()
         {
             this.InitializeComponent();
-            //this.FishViewModel = new FishViewModel();
+            this.FishViewModel = new FishViewModel();
         }
 
         /// <summary>

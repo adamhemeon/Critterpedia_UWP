@@ -35,6 +35,21 @@ namespace Critterpedia.App.Models
 
         [JsonProperty(PropertyName = "icon_uri")]
         public string iconUri { get; set; }
-     
+
+        public string customName
+        {
+            get 
+            {
+                string customName = names.nameUsEn;
+
+                if (string.IsNullOrEmpty(customName))
+                {
+                    return string.Empty;
+                }
+                // Return char and concat substring.
+                return char.ToUpper(customName[0]) + customName.Substring(1);
+            }
+        }
+        public abstract override string ToString();
     }
 }

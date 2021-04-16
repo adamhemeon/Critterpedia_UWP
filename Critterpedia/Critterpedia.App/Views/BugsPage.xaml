@@ -25,8 +25,8 @@
         <DataTemplate x:Key="BugsMasterTemplate" x:DataType="models:Bug">
             <StackPanel Orientation="Horizontal">
                 <Image Source="{x:Bind iconUri}"/>
-                <StackPanel Margin="5">
-                    <TextBlock Text="{x:Bind name}" FontSize="20"/>
+                <StackPanel Margin="5" VerticalAlignment="Center">
+                    <TextBlock Text="{x:Bind customName}" FontSize="20" VerticalAlignment="Center"/>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
