@@ -15,22 +15,21 @@ namespace Critterpedia.App.ViewModels
 {
     class BugsViewModel// : ICritterViewModel
     {
-
         public CritterpediaRepo Repo { get; set; }
 
         #region Collections and lists
-        public ObservableCollection<Critter> Critters { get; set; }
-        public List<Critter> AllCritters { get; set; }
-        public Critter _selectedCritter { get; set; }
+        public ObservableCollection<Bug> Bugs { get; set; }
+        public List<Bug> AllBugs = new List<Bug>();
+        public Bug _selectedBug { get; set; }
         #endregion
         public string _filter { get; set; }
 
-        public Critter SelectedCritter
+        public Bug SelectedBug
         {
-            get { return _selectedCritter; }
+            get { return _selectedBug; }
             set
             {
-                _selectedCritter = value;
+                _selectedBug = value;
             }
         }
 
@@ -49,51 +48,71 @@ namespace Critterpedia.App.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
         #region Methods
-        public void AddCritter()
+        public void AddBug(Bug bug)
         {
-            throw new NotImplementedException();
-            /*Critter newCritter = new Critter(?);
-            AllCritters.Add(newCritter);
-            PerformFiltering();*/
+            AllBugs.Add(bug);
+            PerformFiltering();
+        }
+
+        public void RemoveBug(Bug bug)
+        {
+            AllBugs.Remove(bug);
+            PerformFiltering();
+
+            if (SelectedBug == bug)
+            {
+                SelectedBug = null;
+            }
         }
 
         public void PerformFiltering()
         {
-            //throw new NotImplementedException();
-            /*if (_filter == null)
+            if (_filter == null)
             {
                 _filter = "";
             }
-
+            //If _filter has a value (ie. user entered something in Filter textbox)
+            //Lower-case and trim string
             var lowerCaseFilter = Filter.ToLowerInvariant().Trim();
 
-            var result = AllCritters.Where(d => d.name?).ToList();
+            //Use LINQ query to get all personmodel names that match filter text, as a list
+            var result =
+                AllBugs.Where(n => n.name.ToLowerInvariant()
+                .Contains(lowerCaseFilter))
+                .ToList();
 
-            var toRemove = Critters.Except(result).ToList();
+            //Get list of values in current filtered list that we want to remove
+            //(ie. don't meet new filter criteria)
+            var toRemove = Bugs.Except(result).ToList();
 
-            foreach(var x in toRemove)
+            //Loop to remove items that fail filter
+            foreach (var note in toRemove)
             {
-                Critters.Remove(x);
+                Bugs.Remove(note);
             }
 
             var resultCount = result.Count;
-
-            for(int i = 0; i < resultCount; i++)
+            // Add back in correct order.
+            for (int i = 0; i < resultCount; i++)
             {
-                var resultItem = resultCount[i];
-                if(i + 1 > Critters.Count || !Critters[i].Equals(resultItem))
+                var resultItem = result[i];
+                if (i + 1 > Bugs.Count || !Bugs[i].Equals(resultItem))
                 {
-                    Critters.Insert(i, resultItem);
+                    Bugs.Insert(i, resultItem);
                 }
-            }*/
+            }
         }
 
         public void Refresh()
         {
-            throw new NotImplementedException();
+            AllBugs.Clear();
+            Bugs.Clear();
+            GetBugs();
+
+            SelectedBug = null;
         }
 
-        public void RemoveCritter()
+        public void RemoveBug()
         {
             throw new NotImplementedException();
             /*AllCritters.Remove(SelectedCritter);
@@ -108,10 +127,20 @@ namespace Critterpedia.App.ViewModels
         public BugsViewModel()
         {
             this.Repo = new CritterpediaRepo();
-            Repo.GetBugs();
-            AllCritters = new List<Critter>();
-            PerformFiltering();
+            Bugs = new ObservableCollection<Bug>();
 
+            Refresh();
+            PerformFiltering();
+        }
+
+        public async void GetBugs()
+        {
+            AllBugs = await Repo.GetBugs();
+            
+            foreach(Bug bug in AllBugs)
+            {
+                Bugs.Add(bug);
+            }
         }
     }
 }

@@ -12,6 +12,5 @@ namespace Critterpedia.App.Models
 
         [JsonProperty(PropertyName = "price-flick")]
         public string priceFlick { get; set; }
-
     }
 }

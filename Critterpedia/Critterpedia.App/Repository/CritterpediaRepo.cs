@@ -13,7 +13,7 @@ namespace Critterpedia.App.Repository
 {
     class CritterpediaRepo
     {
-        public async void GetFish()
+        public async Task<List<Fish>> GetFish()
         {
 
             string url = "http://acnhapi.com/v1a/fish";
@@ -24,9 +24,11 @@ namespace Critterpedia.App.Repository
 
             List<Fish> allFish = JsonConvert.DeserializeObject<List<Fish> >(response);
 
+            return allFish;
+
         }
 
-        public async void GetSeaCreatures()
+        public async Task<List<SeaCreature>> GetSeaCreatures()
         {
             string url = "http://acnhapi.com/v1a/sea";
 
@@ -35,9 +37,11 @@ namespace Critterpedia.App.Repository
             string response = await client.GetStringAsync(url);
 
             List<SeaCreature> allSeaCreatures = JsonConvert.DeserializeObject<List<SeaCreature> >(response);
+
+            return allSeaCreatures;
         }
 
-        public async void GetBugs()
+        public async Task<List<Bug>> GetBugs()
         {
             string url = "http://acnhapi.com/v1a/bugs";
 
@@ -46,6 +50,8 @@ namespace Critterpedia.App.Repository
             string response = await client.GetStringAsync(url);
 
             List<Bug> allBugs = JsonConvert.DeserializeObject<List<Bug>>(response);
+
+            return allBugs;
         }
     }
 }
