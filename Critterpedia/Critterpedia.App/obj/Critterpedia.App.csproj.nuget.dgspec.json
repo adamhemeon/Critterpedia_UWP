@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {}
+    "E:\\C#\\Last\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {}
   },
   "projects": {
-    "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {
+    "E:\\C#\\Last\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
+        "projectUniqueName": "E:\\C#\\Last\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
         "projectName": "Critterpedia.App",
-        "projectPath": "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
-        "packagesPath": "C:\\Users\\adamh\\.nuget\\packages\\",
-        "outputPath": "K:\\NSCC\\Year_2\\Winter_2021\\PROG2500Geoff\\FinalProject\\Critterpedia_UWP\\Critterpedia\\Critterpedia.App\\obj\\",
+        "projectPath": "E:\\C#\\Last\\Critterpedia\\Critterpedia.App\\Critterpedia.App.csproj",
+        "packagesPath": "C:\\Users\\kiera\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\Last\\Critterpedia\\Critterpedia.App\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\adamh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kiera\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

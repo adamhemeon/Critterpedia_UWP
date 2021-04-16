@@ -1,0 +1,44 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="Critterpedia.App.BugsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Critterpedia.App"
+    xmlns:models="using:Critterpedia.App.Models"
+    xmlns:viewmodels="using:Critterpedia.App.ViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <viewmodels:BugsViewModel/>
+    </Page.DataContext>
+
+    <Page.Resources>
+
+        <!-- Page Level Styles Go Here -->
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+
+        <!-- Page Level Collection View Source binds the view model from MainPage.cs -->
+        <CollectionViewSource x:ConnectionId='2' x:Name="BugsCollection"                                         />
+
+        <!-- Data Template for the Bugs Master Detail inside the Scroll View -->
+        <DataTemplate x:Key="BugsMasterTemplate"                            >
+            <StackPanel Orientation="Horizontal">
+                <SymbolIcon Symbol="Camera" Margin="0,0,12,0"></SymbolIcon>
+                <StackPanel Margin="5">
+                    <!-- <TextBlock Text="{x:Bind Name}" FontSize="20"></TextBlock> -->
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+
+    </Page.Resources>
+
+    <Grid>
+       
+    </Grid>
+
+</Page>
+
