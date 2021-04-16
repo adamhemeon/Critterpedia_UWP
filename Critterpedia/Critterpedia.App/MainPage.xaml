@@ -5,6 +5,7 @@
     xmlns:local="using:Critterpedia.App"
     xmlns:models="using:Critterpedia.App.Models"
     xmlns:viewmodels="using:Critterpedia.App.ViewModels"
+    xmlns:uc="using:Critterpedia.App.UserControls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -38,6 +39,14 @@
     </Page.TopAppBar>
 
     <Grid>
+
+        <!-- <uc:MasterDetailControl
+                x:Name="CritterSearchBox"
+                Grid.Row="0" Grid.Column="0"
+                Loaded="SearchBox_Loaded" /> -->
+        
+        <!-- TODO: Add three image buttons, each button on click brings us to the master detail for that type of Critter. -->
+
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
             <Button x:Name="FishButton" Click="FishButton_Click">
                 <Image x:Name="FishButtonImg" Source="/Assets/src/nh_tab_fish.png"/>
@@ -49,5 +58,6 @@
                 <Image x:Name="SeaCreaturesButtonImg" Source="/Assets/src/nh_tab_dsc.png"/>
             </Button>
         </StackPanel>
+
     </Grid>
 </Page>

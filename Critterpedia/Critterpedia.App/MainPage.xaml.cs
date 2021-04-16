@@ -84,5 +84,10 @@ namespace Critterpedia.App
             // Navigate to the Sea Creatures Page
             Frame.Navigate(typeof(SeaCreaturesPage));
         }
+
+        private void SearchBox_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
