@@ -1,1 +1,0 @@
-H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\Critterpedia.App.csproj;x86
