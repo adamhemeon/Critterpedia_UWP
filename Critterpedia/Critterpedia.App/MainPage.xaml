@@ -7,34 +7,47 @@
     xmlns:viewmodels="using:Critterpedia.App.ViewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
-    <Page.BottomAppBar>
+    <Page.Resources>
+        <!-- Page Level Styles -->
+        <Style TargetType="Image">
+            <Setter Property="Margin" Value="20"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="300"/>
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BorderBrush" Value="#FF4C3C33"/>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+    </Page.Resources>
+    
+    <Page.TopAppBar>
         <CommandBar>
-            <!--<CommandBar.Content>
-                <TextBlock Text="{x:Bind BugsViewModel.BugName, Mode=TwoWay}" 
-                    FontSize="16" FontWeight="Light" Margin="10">
-                </TextBlock>
-            </CommandBar.Content>-->
-            <!--<AppBarButton Icon="Save" Label="Save"
-                          Command="{x:Bind NotesViewModel.SaveCommand}"
-                          ToolTipService.ToolTip="Save Changes">
-            </AppBarButton>-->
-            <AppBarSeparator />
-            <!--<AppBarButton Icon="Delete" Label="Delete"
-                          Command="{x:Bind NotesViewModel.DeleteCommand}"
-                          ToolTipService.ToolTip="Delete Note">
-            </AppBarButton>-->
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:Name="About" Label="About Critterpedia" ToolTipService.ToolTip="About Critterpedia Application"></AppBarButton>
-                <AppBarButton x:Name="Exit" Label="Exit" ToolTipService.ToolTip="Exit"></AppBarButton>
+                <AppBarButton x:Name="About" Label="About Critterpedia" 
+                              ToolTipService.ToolTip="About Critterpedia Application"
+                              Click="About_Click"/>
+                <AppBarButton x:Name="Exit" Label="Exit" 
+                              ToolTipService.ToolTip="Exit" 
+                              Click="Exit_Click"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
-    </Page.BottomAppBar>
+    </Page.TopAppBar>
 
     <Grid>
-        
-        <!-- TODO: Add three image buttons, each button on click brings us to the master detail for that type of Critter. -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="FishButton" Click="FishButton_Click">
+                <Image x:Name="FishButtonImg" Source="/Assets/src/nh_tab_fish.png"/>
+            </Button>
+            <Button x:Name="BugsButton" Click="BugsButton_Click">
+                <Image x:Name="BugsButtonImg" Source="/Assets/src/nh_tab_bug.png"/>
+            </Button>
+            <Button x:Name="SeaCreaturesButton" Click="SeaCreaturesButton_Click">
+                <Image x:Name="SeaCreaturesButtonImg" Source="/Assets/src/nh_tab_dsc.png"/>
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>
