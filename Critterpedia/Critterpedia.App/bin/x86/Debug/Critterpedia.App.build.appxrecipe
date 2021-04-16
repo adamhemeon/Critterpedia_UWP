@@ -267,6 +267,9 @@
     <AppxPackagedFile Include="H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\UserControls\MasterDetailControl.xbf">
       <PackagePath>UserControls\MasterDetailControl.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\UserControls\SearchBar.xbf">
+      <PackagePath>UserControls\SearchBar.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\Views\BugsPage.xbf">
       <PackagePath>Views\BugsPage.xbf</PackagePath>
     </AppxPackagedFile>

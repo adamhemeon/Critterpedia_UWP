@@ -148,3 +148,8 @@ H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\obj\x
 H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\obj\x86\Debug\ProjectArchitectures.txt
 H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424923200000000.json
+H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\bin\x86\Debug\UserControls\SearchBar.xbf
+H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\obj\x86\Debug\UserControls\SearchBar.g.i.cs
+H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\obj\x86\Debug\UserControls\SearchBar.g.cs
+H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\obj\x86\Debug\UserControls\SearchBar.xaml
+H:\NSCC\Winter2021\PROG2500\Critterpedia_UWP\Critterpedia\Critterpedia.App\obj\x86\Debug\UserControls\SearchBar.xbf

@@ -60,6 +60,7 @@ Critterpedia.App.xr.xml
 MainPage.xbf
 UserControls\AboutAppDialog.xbf
 UserControls\MasterDetailControl.xbf
+UserControls\SearchBar.xbf
 Views\BugsPage.xbf
 Views\FishPage.xbf
 Views\SeaCreaturesPage.xbf

@@ -19,12 +19,7 @@
             <ColumnDefinition Width="259*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Search Box Here -->
-        <TextBox x:Name="FilterTextbox"
-                 Text="{x:Bind CViewModel.Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                 PlaceholderText="Search Critters..."
-                 FontSize="24" Margin="10" Height="40"
-                 Grid.Row="0" Grid.Column="0"/>
+        <local:SearchBar Grid.Row="0" Grid.Column="0"></local:SearchBar>
         <!--Text="{x:Bind NotesViewModel.Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"-->
 
         <!-- Collection Here -->
