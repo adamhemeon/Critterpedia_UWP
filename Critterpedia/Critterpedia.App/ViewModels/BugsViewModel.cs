@@ -59,7 +59,7 @@ namespace Critterpedia.App.ViewModels
 
         public void PerformFiltering()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
             /*if (_filter == null)
             {
                 _filter = "";
