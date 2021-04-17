@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,14 +41,22 @@ namespace Critterpedia.App.Models
         {
             get 
             {
-                string customName = names.nameUsEn;
+                string nameUsEn = names.nameUsEn;
 
-                if (string.IsNullOrEmpty(customName))
+                if (string.IsNullOrEmpty(nameUsEn))
                 {
                     return string.Empty;
                 }
-                // Return char and concat substring.
-                return char.ToUpper(customName[0]) + customName.Substring(1);
+
+                // Retrieved from: https://docs.microsoft.com/en-us/dotnet/api/system.globalization.textinfo.totitlecase?view=net-5.0
+                TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+
+                return textInfo.ToTitleCase(nameUsEn);
+            }
+
+            set
+            {
+                customName = value;
             }
         }
         public abstract override string ToString();

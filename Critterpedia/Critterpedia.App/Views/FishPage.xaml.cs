@@ -60,5 +60,16 @@ namespace Critterpedia.App
             }
             e.Handled = true;
         }
+
+        /// <summary>
+        /// Click event handler for navigating to the About page.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            // Navigate to the About Page
+            Frame.Navigate(typeof(AboutPage));
+        }
     }
 }

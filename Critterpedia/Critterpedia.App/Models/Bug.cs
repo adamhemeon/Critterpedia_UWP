@@ -14,9 +14,9 @@ namespace Critterpedia.App.Models
         public string priceFlick { get; set; }
         public override string ToString()
         {
-            return "Name: " + this.name + "\r\nPrice: " + this.price +
-            "\r\nCatch Phrase: " + this.catchPhrase + "\r\nMuseum Phrase: " + this.museumPhrase + "\r\nRarity: " + this.availability.rarity
-            + "\r\nLocation: " + this.availability.location;
+            return "Name: " + this.customName + "\r\n\nPrice: " + this.price + "\r\n\nFlick Price: " + this.priceFlick +
+            "\r\n\nRarity: " + this.availability.rarity + "\r\n\nLocation: " + this.availability.location + 
+            "\r\n\nCatch Phrase: \"" + this.catchPhrase + "\"" + "\r\n\nMuseum Phrase: \"" + this.museumPhrase + "\"";
         }
     }
 }

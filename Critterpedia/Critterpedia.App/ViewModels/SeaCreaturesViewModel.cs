@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using Critterpedia.App.Commands;
 using Critterpedia.App.Models;
 using Critterpedia.App.Repository;
 
 namespace Critterpedia.App.ViewModels
 {
-    class SeaCreaturesViewModel// : ICritterViewModel
+    class SeaCreaturesViewModel : INotifyPropertyChanged
     {
         public CritterpediaRepo Repo { get; set; }
+
+        public ExitCommand ExitCommand { get; }
 
         #region Collections and lists
         public ObservableCollection<SeaCreature> SeaCreatures { get; set; }
@@ -21,7 +24,9 @@ namespace Critterpedia.App.ViewModels
 
         public string SeaCreatureInfo { get; set; }
 
-        //public string SeaCreatureImageUri { get; set; }
+        public string SeaCreatureImageUri { get; set; }
+
+        public string SeaCreatureCustomName { get; set; }
 
         public SeaCreature SelectedSeaCreature
         {
@@ -32,16 +37,19 @@ namespace Critterpedia.App.ViewModels
                 if(value == null)
                 {
                     SeaCreatureInfo = "";
-                    //SeaCreatureImageUri = "/Assets/src/nh_tab_dsc.png";
+                    SeaCreatureImageUri = "/Assets/src/blank_icon.png";
+                    SeaCreatureCustomName = "";
                 }
                 else
                 {
                     SeaCreatureInfo = value.ToString();
-                    //SeaCreatureImageUri = value.imageUri;
+                    SeaCreatureImageUri = value.imageUri;
+                    SeaCreatureCustomName = value.customName;
                 }
 
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SeaCreatureInfo"));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SeaCreatureImageUri"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SeaCreatureCustomName"));
             }
         }
 
@@ -130,6 +138,7 @@ namespace Critterpedia.App.ViewModels
         /// </summary>
         public SeaCreaturesViewModel()
         {
+            ExitCommand = new ExitCommand();
             this.Repo = new CritterpediaRepo();
             SeaCreatures = new ObservableCollection<SeaCreature>();
 
