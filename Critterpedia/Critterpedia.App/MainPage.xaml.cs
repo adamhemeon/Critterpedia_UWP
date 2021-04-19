@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Core;
+using Critterpedia.App.Commands;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -27,9 +28,6 @@ namespace Critterpedia.App
         public MainPage()
         {
             this.InitializeComponent();
-            FishViewModel fvm = new FishViewModel();
-            SeaCreaturesViewModel scvm = new SeaCreaturesViewModel();
-            BugsViewModel bvm = new BugsViewModel();
         }
 
 
@@ -57,13 +55,13 @@ namespace Critterpedia.App
         }
 
         /// <summary>
-        /// Click event handler for exiting the application.
+        /// Click event handler for exiting the program.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            // Exit the application programatically
+            // Programmatically Exit
             Application.Current.Exit();
         }
 
@@ -83,11 +81,6 @@ namespace Critterpedia.App
         {
             // Navigate to the Sea Creatures Page
             Frame.Navigate(typeof(SeaCreaturesPage));
-        }
-
-        private void SearchBox_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

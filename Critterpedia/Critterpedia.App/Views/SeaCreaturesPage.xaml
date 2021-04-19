@@ -15,7 +15,6 @@
     </Page.DataContext>
 
     <Page.Resources>
-
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"></Setter>
         </Style>
@@ -30,8 +29,23 @@
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
-
     </Page.Resources>
+
+    <Page.TopAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <TextBlock Text="Sea Creatures Page" FontSize="16" FontWeight="Light" Margin="10"/>
+            </CommandBar.Content>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="About" Label="About Critterpedia" 
+                              ToolTipService.ToolTip="About Critterpedia Application"
+                              Click="About_Click"/>
+                <AppBarButton x:Name="Exit" Label="Exit" 
+                              ToolTipService.ToolTip="Exit" 
+                              Command="{x:Bind SeaCreaturesViewModel.ExitCommand}"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -42,8 +56,6 @@
             <ColumnDefinition Width="116*"/>
             <ColumnDefinition Width="259*"/>
         </Grid.ColumnDefinitions>
-
-        <TextBlock Text="Sea Creatures Page"/>
 
         <!-- Search Box Here -->
         <TextBox x:Name="FilterTextbox" 
@@ -63,12 +75,15 @@
         </ScrollViewer>
 
         <!-- Sea Creature Content Here -->
-        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="10">
-            <!--<Image Source="{x:Bind SeaCreaturesViewModel.SeaCreatureImageUri}"/>-->
-            <TextBlock Text="{x:Bind SeaCreaturesViewModel.SeaCreatureInfo, Mode=TwoWay}"
+        <ScrollViewer Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="10" >
+            <StackPanel Margin="10">
+                <TextBlock Text="{x:Bind SeaCreaturesViewModel.SeaCreatureCustomName, Mode=TwoWay}" FontSize="40"/>
+                <Image Stretch="Uniform" Height="400"
+                   Source="{x:Bind SeaCreaturesViewModel.SeaCreatureImageUri, Mode=TwoWay}" />
+                <TextBlock Text="{x:Bind SeaCreaturesViewModel.SeaCreatureInfo, Mode=TwoWay}"
                     TextWrapping="Wrap"/>
-            <TextBlock Text="Hello"/>
-        </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
     
 </Page>

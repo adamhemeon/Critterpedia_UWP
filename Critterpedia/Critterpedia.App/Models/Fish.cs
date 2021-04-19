@@ -19,9 +19,9 @@ namespace Critterpedia.App.Models
 
         public override string ToString()
         {
-            return "Name: " + this.name + "\r\nShadow: " + this.shadow + "\r\nPrice: " + this.price +
-                "\r\nCatch Phrase: " + this.catchPhrase + "\r\nMuseum Phrase: " + this.museumPhrase + "\r\nRarity: " + this.availability.rarity
-                + "\r\nLocation: " + this.availability.location;
+            return "Name: " + this.customName + "\r\n\nShadow: " + this.shadow + "\r\n\nPrice: " + this.price + "\r\n\nCJ Price: " + this.priceCj +
+                "\r\n\nRarity: " + this.availability.rarity + "\r\n\nLocation: " + this.availability.location +
+                "\r\n\nCatch Phrase: \"" + this.catchPhrase + "\"" + "\r\n\nMuseum Phrase: \"" + this.museumPhrase + "\"";
         }
 
     }

@@ -13,9 +13,11 @@ using System.Diagnostics;
 
 namespace Critterpedia.App.ViewModels
 {
-    class BugsViewModel// : ICritterViewModel
+    class BugsViewModel : INotifyPropertyChanged
     {
         public CritterpediaRepo Repo { get; set; }
+
+        public ExitCommand ExitCommand { get; }
 
         #region Collections and lists
         public ObservableCollection<Bug> Bugs { get; set; }
@@ -23,6 +25,11 @@ namespace Critterpedia.App.ViewModels
         public Bug _selectedBug { get; set; }
         #endregion
         public string _filter { get; set; }
+        public string BugInfo { get; set; }
+
+        public string BugImageUri { get; set; }
+
+        public string BugCustomName { get; set; }
 
         public Bug SelectedBug
         {
@@ -30,6 +37,22 @@ namespace Critterpedia.App.ViewModels
             set
             {
                 _selectedBug = value;
+                if (value == null)
+                {
+                    BugInfo = "";
+                    BugImageUri = "Assets/src/blank_icon.png";
+                    BugCustomName = "";
+                }
+                else
+                {
+                    BugInfo = value.ToString();
+                    BugImageUri = value.imageUri;
+                    BugCustomName = value.customName;
+                }
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BugInfo"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BugImageUri"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("BugCustomName"));
             }
         }
 
@@ -118,6 +141,7 @@ namespace Critterpedia.App.ViewModels
         /// </summary>
         public BugsViewModel()
         {
+            ExitCommand = new ExitCommand();
             this.Repo = new CritterpediaRepo();
             Bugs = new ObservableCollection<Bug>();
 

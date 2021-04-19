@@ -15,11 +15,10 @@
     </Page.DataContext>
 
     <Page.Resources>
-
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="20"></Setter>
         </Style>
-
+        
         <CollectionViewSource x:Name="BugsCollection" Source="{x:Bind BugsViewModel.Bugs}"/>
 
         <DataTemplate x:Key="BugsMasterTemplate" x:DataType="models:Bug">
@@ -30,8 +29,23 @@
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
-
     </Page.Resources>
+
+    <Page.TopAppBar>
+        <CommandBar>
+            <CommandBar.Content>
+                <TextBlock Text="Bugs Page" FontSize="16" FontWeight="Light" Margin="10"/>
+            </CommandBar.Content>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="About" Label="About Critterpedia" 
+                              ToolTipService.ToolTip="About Critterpedia Application"
+                              Click="About_Click"/>
+                <AppBarButton x:Name="Exit" Label="Exit" 
+                              ToolTipService.ToolTip="Exit" 
+                              Command="{x:Bind BugsViewModel.ExitCommand}"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -42,8 +56,6 @@
             <ColumnDefinition Width="116*"/>
             <ColumnDefinition Width="259*"/>
         </Grid.ColumnDefinitions>
-
-        <TextBlock Text="Bugs Page"/>
 
         <!-- Search Box Here -->
         <TextBox x:Name="FilterTextbox" 
@@ -60,6 +72,17 @@
                 ItemTemplate="{StaticResource BugsMasterTemplate}"
                 SelectedItem="{x:Bind BugsViewModel.SelectedBug, Mode=TwoWay}">
             </ListView>
+        </ScrollViewer>
+
+        <!-- Bug Content Here -->
+        <ScrollViewer Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="10" >
+            <StackPanel Margin="10">
+                <TextBlock Text="{x:Bind BugsViewModel.BugCustomName, Mode=TwoWay}" FontSize="40"/>
+                <Image Stretch="Uniform" Height="400"
+                   Source="{x:Bind BugsViewModel.BugImageUri, Mode=TwoWay}" />
+                <TextBlock Text="{x:Bind BugsViewModel.BugInfo, Mode=TwoWay}"
+                    TextWrapping="Wrap"/>
+            </StackPanel>
         </ScrollViewer>
     </Grid>
 

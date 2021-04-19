@@ -13,9 +13,10 @@ using System.Diagnostics;
 
 namespace Critterpedia.App.ViewModels
 {
-    class FishViewModel// : ICritterViewModel
+    class FishViewModel : INotifyPropertyChanged
     {
         public CritterpediaRepo Repo { get; set; }
+        public ExitCommand ExitCommand { get; }
 
         #region Collections and lists
         public ObservableCollection<Fish> Fish { get; set; }
@@ -24,12 +25,34 @@ namespace Critterpedia.App.ViewModels
         #endregion
         public string _filter { get; set; }
 
+        public string FishInfo { get; set; }
+
+        public string FishImageUri { get; set; }
+
+        public string FishCustomName { get; set; }
+
         public Fish SelectedFish
         {
             get { return _selectedFish; }
             set
             {
                 _selectedFish = value;
+                if (value == null)
+                {
+                    FishInfo = "";
+                    FishImageUri = "/Assets/src/blank_icon.png";
+                    FishCustomName = "";
+                }
+                else
+                {
+                    FishInfo = value.ToString();
+                    FishImageUri = value.imageUri;
+                    FishCustomName = value.customName;
+                }
+
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FishInfo"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FishImageUri"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("FishCustomName"));
             }
         }
 
@@ -118,6 +141,7 @@ namespace Critterpedia.App.ViewModels
         /// </summary>
         public FishViewModel()
         {
+            ExitCommand = new ExitCommand();
             this.Repo = new CritterpediaRepo();
             Fish = new ObservableCollection<Fish>();
 
