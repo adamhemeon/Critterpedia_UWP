@@ -3,7 +3,9 @@ This application was developed by Adam Hemeon, Jayden Morehouse, Kieran London, 
 
 Windows UWP Application using XAML and data binding to pull Nintendo's Animal Crossing critter data (fish, bugs, sea creatures) from a public API and display them in a Master Detail / Flow format.
 
-Mock-up created in AdobeXD with WindowsUI.xd component assets from https://docs.microsoft.com/en-us/windows/uwp/design/downloads/ and images from ACNH API http://acnhapi.com/doc
+Mock-up created in AdobeXD with WindowsUI.xd component assets from https://docs.microsoft.com/en-us/windows/uwp/design/downloads/ with data and images from ACNH API http://acnhapi.com/doc
+
+Disclaimer: Critterpedia and NSCC claims no ownership of any intellectual property associated with Nintendo or Animal Crossing. All assets found in this application and repository are the sole property of Nintendo and are only used for non-commercial and educational purposes.
 
 ![Surface Pro 3 – OnStart](https://user-images.githubusercontent.com/54990039/112906080-f21ce580-90c1-11eb-9157-5031880c2b7c.png)
 ![Surface Pro 3 – Main](https://user-images.githubusercontent.com/54990039/112906085-f3e6a900-90c1-11eb-87b8-3c3a6d532ec7.png)
